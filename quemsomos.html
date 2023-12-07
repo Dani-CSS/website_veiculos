@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quem somos</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+            color: #fff;
+            text-decoration: none;
+            scroll-padding-top: 1rem;
+            scroll-behavior: smooth;
+            list-style: none;
+        }
+        :root {
+            --main-color: #d90429;
+            --text-color: #020102;
+            --bg-color: #fff;
+        }            
+        .body{
+            padding: 20px;
+            margin: 0;
+        }
+        .navbar {
+            position: fixed;    
+            justify-content: space-between;
+            align-items: auto;
+            width: 100%;
+            padding: 10px;
+            display: flex;
+            background-color: rgba(0, 0, 0, 0.815);
+            z-index: 1;
+            
+        }
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            justify-content: space-between;
+            gap: 1rem;
+            margin: auto; 
+            
+        }
+
+        .navbar ul a {
+      color: white;
+      font-size: 16px;
+    }
+        a:hover{
+            color: rgb(228, 127, 127);
+        }  
+        
+        #menu {
+            
+            position: absolute;
+            top: 40px;
+            left: 10px;
+            background-color: #0a080891;
+            padding: 10px;
+            border: 0;
+        }
+        .logomarca{
+            width: 10%;
+            height: 75%;
+        }
+        #menu a {
+            display: block;
+            padding: 8px;
+            text-decoration: none;
+            font-family: "Poppins", sans-serif;
+            color: var(--bg-color);
+        }
+        #menu a:hover {
+            color: rgb(228, 127, 127);
+        }
+        .container {
+        max-width: 1068px;
+        margin-left: auto;
+        margin-right: auto;
+        }
+        .section {
+        padding: 4rem 0 2rem;
+        }
+        .btn {
+        padding: 10px 22px;
+        background: var(--main-color);
+        color: var(--bg-color);
+        font-weight: 400;
+        border-radius: 5px;
+        }
+        .btn:hover {
+        background: var(--main-color);
+        }
+    
+        .about {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 5rem;
+        }
+        .about-img {
+        flex: 1 1 21rem;
+        margin-top: 10rem;
+    padding: 5px 5px 5px 10px;
+        }
+        .about-text {
+        flex: 1 1 21rem;
+        align-content: center;
+        color: #020102;
+        }
+        .about-text span {
+        font-weight: 500;
+        color: var(--main-color);
+        align-content: center;
+        }
+        .about-text h2 {
+        font-size: 1.7rem;
+        color: #020102;
+        }
+        .about-text p {
+        font-size: 0.938rem;
+        font-weight: 300;
+        margin: 0.5rem 0 1.4rem;
+        text-align: justify;
+        color: #020102;
+        }
+
+        .heading {
+        text-align: center;
+        
+        }
+        .heading span {
+        font-weight: 500;
+        color: var(--main-color);
+        
+        }
+        .heading h2 {
+        font-size: 1.7rem;
+        color: #020102;
+        }
+        .heading p {
+        font-size: 0.938rem;
+        font-weight: 300;
+        margin: 0.5rem 0 1.4rem;
+        color: #020102;
+        }
+
+        .whatsapp-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 500;
+        }
+
+        .whatsapp-icon a {
+            display: block;
+            padding: 10px;
+            border-radius: 50%;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .whatsapp-icon a:hover {
+            transform: scale(1.3);
+        }
+        .whatsapp-icon img {
+            width: 60px; /* Ajuste o tamanho conforme necessário */
+        }
+
+        footer {
+                
+                background: var(--text-color);  
+                border-top: 2px solid var(--main-color); 
+                padding: 1%;  
+                bottom: 0; 
+                width: 100%;
+                height: 10%;
+                margin: auto;
+                font-size: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+        }   
+
+        @media only screen and (max-width: 768px) {
+        .logomarca {
+        width: 20%; /* Ajuste conforme necessário */
+        height: auto;
+        margin: 0 auto; /* Isso centralizará a logomarca horizontalmente */
+        display: block; /* Isso garante que a margem automática funcione corretamente */
+        }
+
+        .navbar {
+            flex-direction: column;
+            background-image: url(img/interior.jpg); /* Certifique-se de fechar a regra do background-image com ponto e vírgula */
+        }
+
+    .navbar #menu {
+        position: static;
+        display: none;
+        padding: 1%;
+    }
+
+  #menu {
+    text-align: center; /* Adicione esta propriedade para centralizar o conteúdo */
+  }
+
+  #menu a {
+    display: block; /* Garante que o link ocupa toda a largura disponível */
+    padding: 8px; /* Adicione algum espaçamento conforme necessário */
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    color: var(--bg-color);
+  }
+  .navbar ul {
+    margin: 10px 0; /* Adicione uma margem para separar a logomarca da lista de navegação */
+  }
+  
+  .navbar ul a {
+    font-size: 12px; 
+  }
+
+  .about-img img {
+    width: 100%;             
+    margin-top: 7rem;
+    padding: 5px 5px 5px 10px;
+  }
+  .about-text {
+    margin-top: -7rem;
+    padding: 10%;
+  }
+
+   
+   
+}
+
+        .about-img img {
+            width: 70%; /* Ajuste para a largura total do contêiner */
+            height: auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .whatsapp-icon img {
+            width: 40px; 
+        }
+
+        footer{
+            margin-top: 5rem;
+            font-size: 10px;
+            height: 10%;
+
+        }
+        
+
+}
+
+
+       
+    </style>
+
+</head>
+<body>
+
+    <nav class="navbar">
+        <div id="logo">
+            <img class="logomarca" onmouseover="showMenu()" onmouseout="hideMenu()" src="img/logo1.png">
+        </div>
+        
+        <div id="menu" onmouseover="showMenu()" onmouseout="hideMenu()">
+            <a href="patio.html">F&L Veículos</a>
+            <a href="motos.html">F&L Motos</a>
+            <a href="locar.html">LoqCar</a>
+          </div>
+  
+        <script>
+            function showMenu() {
+            var menu = document.getElementById("menu");
+            menu.style.display = "block";
+            }
+        
+            function hideMenu() {
+            var menu = document.getElementById("menu");
+            menu.style.display = "none";
+            }
+
+            document.getElementById("logomarca").addEventListener("mouseout", hideMenu);
+        </script>
+
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="quemsomos.html">Quem somos</a></li>
+            <li><a href="patio.html">Pátio</a></li>
+            <li><a href="blog.html">Fique por dentro</a></li>
+            <li><a href="https://www.canva.com/design/DAFqZdL1D34/cRb9zQHZBMVuDu98Yq8n4Q/view?utm_content=
+            DAFqZdL1D34&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">Contato</a></li>
+        </ul>
+    </nav>
+
+    
+    <section class="about container" id="about">
+      <div class="about-img">
+        <img src="img/carro1.png" />
+      </div>
+      <div class="about-text">
+        <span>Quem somos</span>
+        <h2> A melhor seleção de seminovos da cidade dos automóveis </h2>
+        <p> Somos uma empresa há mais de 15 anos no mercado automobilístico,  comprometida a realizar  sonhos 
+            com agilidade, eficiência, transparência e segurança. Em um contexto em que as exigências dos nossos 
+            clientes são cada vez mais elevadas, e com os ambientes tecnológico e regulamentar em evolução permanente, 
+            a qualidade dos nossos veículos é um eixo estratégico do <span> Grupo F&L.     
+        </p>
+        
+      </div>
+    </section>
+
+    <section class="parts" id="parts">
+      <div class="heading">
+        <span>Nosso diferencial</span>
+        <h2>Atendimento de excelência</h2>
+        <p>
+          Nossa equipe conta com profissionais experientes, veículos revisados e com procedência, <br> além de
+          condições de pagamento imperdíveis. Atendimento personalizado.</p>
+      <br><a href="https://www.canva.com/design/DAFqZdL1D34/cRb9zQHZBMVuDu98Yq8n4Q/view?utm_content=DAFqZdL1D34&utm_campaign=designshare&utm
+        _medium=link&utm_source=publishsharelink" class="btn">Fale conosco agora</a>
+      </div>
+
+      <section>
+        
+      </section>
+
+   
+      <div class="whatsapp-icon">
+        <a href="https://api.whatsapp.com/send?phone=5561995088686" target="_blank" title="Fale conosco pelo WhatsApp">
+          <img src="img/w4.png" alt="WhatsApp">
+        </a>
+      </div>
+
+
+
+
+    <footer>
+        <p>&copy; 2023 Desenvolvido por Daniele Cardoso | Todos os direitos reservados &#174;</p>        
+    </footer>
+    
+</body>
+</html>
