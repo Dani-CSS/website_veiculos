@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Patio</title>
-   
+
   <style>
     * {
       margin: 0;
@@ -16,42 +17,49 @@
       scroll-behavior: smooth;
       list-style: none;
       text-decoration: none;
-      
+
     }
+
     :root {
       --main-color: #d90429;
       --text-color: #020102;
       --bg-color: #fff;
     }
+
     img {
       width: 100%;
     }
-    body {      
+
+    body {
       margin: 0;
       font-family: Arial, sans-serif;
     }
+
     .navbar {
-      position: relative;    
+      position: relative;
       justify-content: space-between;
       align-items: auto;
       width: 100%;
       padding: 10px;
       display: flex;
       background-color: rgba(0, 0, 0, 0.815);
-      z-index: 1;            
+      z-index: 1;
     }
+
     #menu {
-    position: absolute;
-    top: 40px;
-    left: 10px;
-    background-color: #0a080891;
-    padding: 10px;
-    border: 0;
+      position: absolute;
+      top: 40px;
+      left: 10px;
+      background-color: #0a080891;
+      padding: 10px;
+      border: 0;
     }
-    .logomarca{
+
+    .logomarca {
       width: 10%;
       height: 75%;
     }
+
     #menu a {
       display: block;
       padding: 8px;
@@ -59,46 +67,55 @@
       font-family: "Poppins", sans-serif;
       color: var(--bg-color);
     }
+
     #menu a:hover {
       color: rgb(228, 127, 127);
     }
+
     .navbar ul {
       display: flex;
       justify-content: space-between;
       gap: 1rem;
-      margin: auto; 
+      margin: auto;
     }
 
     .navbar ul a {
       color: white;
       font-size: 16px;
     }
-    .navbar ul a:hover{
-    color: rgb(228, 127, 127);
-    }  
+
+    .navbar ul a:hover {
+      color: rgb(228, 127, 127);
+    }
+
     .container {
       max-width: 1068px;
       margin-left: auto;
       margin-right: auto;
-      
+
     }
+
     .home-text {
       text-align: center;
-      
+
     }
+
     .home-text h1 {
       font-size: 2.4rem;
       color: var(--main-color);
-      
+
     }
+
     .home-text span {
       color: var(--main-color);
     }
+
     .home-text p {
       font-size: 1rem;
       font-weight: 300;
       margin: 0.5rem 0 1.2rem;
     }
+
     .cars-container .box {
       flex: 1 1 17rem;
       position: relative;
@@ -106,13 +123,15 @@
       border-radius: 0.5rem;
       overflow: hidden;
       margin: 10px;
-      
+
       margin-top: 1rem;
-    } 
+    }
+
     .cars-container .box img:hover {
       transform: scale(1.1);
       transition: 0.5s;
     }
+
     .cars-container .box h2 {
       position: absolute;
       bottom: 1rem;
@@ -124,28 +143,33 @@
       background: var(--main-color);
       color: var(--bg-color);
     }
+
     .btn-saiba-mais {
-    display: none;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 5px 10px; /* Ajuste conforme necessário */
-    color: white;
-    transition: background-color 0.4s;
-    border-radius: 00.5rem;
+      display: none;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 5px 10px;
+      /* Ajuste conforme necessário */
+      color: white;
+      transition: background-color 0.4s;
+      border-radius: 00.5rem;
     }
+
     .box:hover .btn-saiba-mais {
-    display: block;
-    background: var(--main-color);
-    color: var(--bg-color);
+      display: block;
+      background: var(--main-color);
+      color: var(--bg-color);
     }
+
     .cars-container {
-    display: flex;
-    flex-wrap: wrap;
+      display: flex;
+      flex-wrap: wrap;
     }
+
     .popup {
       display: none;
       position: fixed;
@@ -163,6 +187,7 @@
       z-index: 999;
       overflow: hidden;
     }
+
     .popup img {
       max-width: 100%;
       max-height: 70%;
@@ -170,6 +195,7 @@
       border-radius: 10px;
       margin-bottom: 10px;
     }
+
     .popup textarea {
       width: 100%;
       height: 20%;
@@ -179,12 +205,14 @@
       margin-bottom: 10px;
       resize: none;
     }
+
     .popup-btns {
       display: flex;
       justify-content: center;
       margin-top: 10px;
     }
-      .popup-btn {
+
+    .popup-btn {
       padding: 10px;
       background: var(--main-color);
       color: var(--bg-color);
@@ -223,126 +251,139 @@
       font-size: 1.5rem;
       margin-bottom: 10px;
     }
+
     .whatsapp-icon {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 500;
-  }
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 500;
+    }
 
-  .whatsapp-icon a {
-    display: block;
-    padding: 10px;
-    border-radius: 50%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  }
+    .whatsapp-icon a {
+      display: block;
+      padding: 10px;
+      border-radius: 50%;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
 
-  .whatsapp-icon a:hover {
+    .whatsapp-icon a:hover {
       transform: scale(1.3);
-  }
-  .whatsapp-icon img {
-    width: 60px; /* Ajuste o tamanho conforme necessário */
-  }
-    
-  footer {
-          
-          background: var(--text-color);  
-          border-top: 2px solid var(--main-color); 
-          padding: 1%;  
-          bottom: 0; 
-          width: 100%;
-          height: 10%;
-          margin: auto;
-          font-size: 12px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-}   
+    }
 
-@media only screen and (max-width: 768px) {
-  .logomarca {
-    width: 20%; /* Ajuste conforme necessário */
-    height: auto;
-    margin: 0 auto; /* Isso centralizará a logomarca horizontalmente */
-    display: block; /* Isso garante que a margem automática funcione corretamente */
-  }
+    .whatsapp-icon img {
+      width: 60px;
+      /* Ajuste o tamanho conforme necessário */
+    }
 
-  .navbar {
-    flex-direction: column;
-    background-image: url(img/interior.jpg); /* Certifique-se de fechar a regra do background-image com ponto e vírgula */
-  }
+    footer {
 
-  .navbar #menu {
-    position: static;
-    display: none;
-    padding: 1%;
-  }
+      background: var(--text-color);
+      border-top: 2px solid var(--main-color);
+      padding: 1%;
+      bottom: 0;
+      width: 100%;
+      height: 10%;
+      margin: auto;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-  #menu {
-    text-align: center; /* Adicione esta propriedade para centralizar o conteúdo */
-  }
+    @media only screen and (max-width: 768px) {
+      .logomarca {
+        width: 20%;
+        /* Ajuste conforme necessário */
+        height: auto;
+        margin: 0 auto;
+        /* Isso centralizará a logomarca horizontalmente */
+        display: block;
+        /* Isso garante que a margem automática funcione corretamente */
+      }
 
-  #menu a {
-    display: block; /* Garante que o link ocupa toda a largura disponível */
-    padding: 8px; /* Adicione algum espaçamento conforme necessário */
-    text-decoration: none;
-    font-family: "Poppins", sans-serif;
-    color: var(--bg-color);
-  }
+      .navbar {
+        flex-direction: column;
+        background-image: url(img/interior.jpg);
+        /* Certifique-se de fechar a regra do background-image com ponto e vírgula */
+      }
 
-  .navbar ul {
-    margin: 10px 0; /* Adicione uma margem para separar a logomarca da lista de navegação */
-  }
-  
-  .navbar ul a {
-    font-size: 12px; /* Ajuste conforme necessário */
-  }
+      .navbar #menu {
+        position: static;
+        display: none;
+        padding: 1%;
+      }
 
-  .popup {
-    width: 90%; /* Ajuste conforme necessário */
-  }
-}
+      #menu {
+        text-align: center;
+        /* Adicione esta propriedade para centralizar o conteúdo */
+      }
 
+      #menu a {
+        display: block;
+        /* Garante que o link ocupa toda a largura disponível */
+        padding: 8px;
+        /* Adicione algum espaçamento conforme necessário */
+        text-decoration: none;
+        font-family: "Poppins", sans-serif;
+        color: var(--bg-color);
+      }
+
+      .navbar ul {
+        margin: 10px 0;
+        /* Adicione uma margem para separar a logomarca da lista de navegação */
+      }
+
+      .navbar ul a {
+        font-size: 12px;
+        /* Ajuste conforme necessário */
+      }
+
+      .popup {
+        width: 90%;
+        /* Ajuste conforme necessário */
+      }
+    }
   </style>
 </head>
+
 <body>
 
   <nav class="navbar">
     <div id="logo">
-        <img class="logomarca" onmouseover="showMenu()" onmouseout="hideMenu()" src="img/logo1.png">
+      <img class="logomarca" onmouseover="showMenu()" onmouseout="hideMenu()" src="img/logo1.png">
     </div>
-    
+
     <div id="menu" onmouseover="showMenu()" onmouseout="hideMenu()">
-        <a href="patio.html">F&L Veículos</a>
-        <a href="motos.html">F&L Motos</a>
-        <a href="locar.html">LoqCar</a>
-      </div>
+      <a href="patio.html">F&L Veículos</a>
+      <a href="motos.html">F&L Motos</a>
+      <a href="locar.html">LoqCar</a>
+    </div>
 
     <script>
-        function showMenu() {
+      function showMenu() {
         var menu = document.getElementById("menu");
         menu.style.display = "block";
-        }
-    
-        function hideMenu() {
+      }
+
+      function hideMenu() {
         var menu = document.getElementById("menu");
         menu.style.display = "none";
-        }
+      }
 
-        document.getElementById("logomarca").addEventListener("mouseout", hideMenu);
+      document.getElementById("logomarca").addEventListener("mouseout", hideMenu);
     </script>
 
     <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="quemsomos.html">Quem somos</a></li>
-        <li><a href="patio.html">Pátio</a></li>
-        <li><a href="blog.html">Fique por dentro</a></li>
-        <li><a href="https://www.canva.com/design/DAFqZdL1D34/cRb9zQHZBMVuDu98Yq8n4Q/view?utm_content=
+      <li><a href="index.html">Início</a></li>
+      <li><a href="quemsomos.html">Quem somos</a></li>
+      <li><a href="patio.html">Pátio</a></li>
+      <li><a href="blog.html">Fique por dentro</a></li>
+      <li><a href="https://www.canva.com/design/DAFqZdL1D34/cRb9zQHZBMVuDu98Yq8n4Q/view?utm_content=
         DAFqZdL1D34&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">Contato</a></li>
     </ul>
-</nav>
+  </nav>
 
-  
+
   <section class="home" id="home" style="margin-top: 1%;">
     <div class="home-text">
       <h1>
@@ -357,52 +398,339 @@
 
   <section class="cars" id="cars">
     <div class="cars-container container">
-       <!--imageSrc, carModel, description --> 
-        <div class="box" onclick="openPopup(['img/Onix_Black_Edition/2.jpeg', 'img/Onix_Black_Edition/3.jpeg',
-         'img/Onix_Black_Edition/4.jpeg', 'img/Onix_Black_Edition/5.jpeg', 'img/Onix_Black_Edition/6.jpeg',
-         'img/Onix_Black_Edition/7.jpeg'],'Onix Black Edition 2021', '🚗 Modelo: Onix Black Edition\n⭕ Cor: Prata\n💰 Por: 61.990\n🗓 Ano/ modelo: 2021\n🔑 Cambio: Manual\n⛽ Combustível: Flex\nKM: 20.200 km')">
-          <img src="img/Onix_Black_Edition/1.jpeg" alt="imagem carro" />
-          <h2>Onix Black Edition 2021</h2>
-          <button class="btn-saiba-mais">Saiba Mais</button>
+      <!--imageSrc, carModel, description -->
+      <div class="box"
+        onclick="openPopup(['img/kwidVinho/2.jpeg', 'img/kwidVinho/3.jpeg', 'img/kwidVinho/4.jpeg', 'img/kwidVinho/5.jpeg', 'img/kwidVinho/6.jpeg', 
+        'img/kwidVinho/7.jpeg', 'img/kwidVinho/8.jpeg'],'Kwid Zen TEMOS NA COR PRETO, PRATA E VERMELHO 0 KM', '🚗 Modelo:1.0 completo\n⭕ Cor: Preto, Prata, Vermelho\n🗓 Ano/ modelo: 2010/2011\n🔑 Cambio: manual\n⛽ Combustível: flex\n')">
+        <img src='img/kwidVinho/1.jpeg' alt="imagem carro" />
+        <h2>Kwid Zen 2024</h2>
+        <button class="btn-saiba-mais">Saiba Mais</button>
       </div>
 
-         <div class="box" onclick="openPopup(['img/Fox_city/2.jpeg', 'img/Fox_city/3.jpeg',
+      <div class="box"
+        onclick="openPopup(['img/Fox_city/2.jpeg', 'img/Fox_city/3.jpeg',
           'img/Fox_city/4.jpeg', 'img/Fox_city/5.jpeg', 'img/Fox_city/6.jpeg',
           'img/Fox_city/7.jpeg'],'Fox City 2008', '🚗 Modelo: Fox City\n⭕ Cor: Preto\n💰 Por: R$ 18.990\n🗓 Ano/ modelo: 2007/2008\n🔑 Cambio: Manual\n⛽ Combustível: Flex')">
-           <img src="img/Fox_city/1.jpeg" alt="imagem carro" />
-           <h2>Fox City 2008</h2>
-           <button class="btn-saiba-mais">Saiba Mais</button>
-       </div>
+        <img src="img/Fox_city/1.jpeg" alt="imagem carro" />
+        <h2>Fox City 2008</h2>
+        <button class="btn-saiba-mais">Saiba Mais</button>
+      </div>
 
-         <div class="box" onclick="openPopup(['img/Palio/2.jpeg', 'img/Palio/3.jpeg', 
+      <div class="box"
+        onclick="openPopup(['img/Palio/2.jpeg', 'img/Palio/3.jpeg', 
           'img/Palio/4.jpeg', 'img/Palio/5.jpeg', 'img/Palio/6.jpeg'],'Palio Fire 1.0 2008', '🚗 Modelo: Palio Fire 1.0\n⭕ Cor: Preto\n💰 Por: R$ 22.990,00\n🗓 Ano/ modelo: 2007/2008\n🔑 Cambio: Manual\n⛽ Combustível: Flex')">
-           <img src="img/Palio/1.jpeg" alt="imagem carro" />
-           <h2>Palio Fire 1.0 2008</h2>
-           <button class="btn-saiba-mais">Saiba Mais</button>
-       </div>
+        <img src="img/Palio/1.jpeg" alt="imagem carro" />
+        <h2>Palio Fire 1.0 2008</h2>
+        <button class="btn-saiba-mais">Saiba Mais</button>
+      </div>
 
-         <div class="box" onclick="openPopup(['img/Gol/2.jpeg', 'img/Gol/3.jpeg',
+      <div class="box"
+        onclick="openPopup(['img/Gol/2.jpeg', 'img/Gol/3.jpeg',
           'img/Gol/4.jpeg', 'img/Gol/5.jpeg', 'img/Gol/6.jpeg'],'Gol 1.6 2018', '🚗 Modelo: Gol 1.6 \n⭕ Cor: Branco\n💰 Por: R$ 46.990\n🗓 Ano/ modelo: 2018/2018\n🔑 Cambio: Manual\n⛽ Combustível: Flex\n')">
-           <img src="img/Gol/1.jpeg" alt="imagem carro" />
-           <h2>Gol 1.6 2018</h2>
-           <button class="btn-saiba-mais">Saiba Mais</button>
-       </div>
+        <img src="img/Gol/1.jpeg" alt="imagem carro" />
+        <h2>Gol 1.6 2018</h2>
+        <button class="btn-saiba-mais">Saiba Mais</button>
+      </div>
 
-       <div class="box" onclick="openPopup(['img/i30/2.jpeg', 'img/i30/3.jpeg',
+      <div class="box"
+        onclick="openPopup(['img/i30/2.jpeg', 'img/i30/3.jpeg',
        'img/i30/4.jpeg', 'img/i30/5.jpeg', 'img/i30/6.jpeg',
        'img/i30/7.jpeg'],'i30 2.0 2010', '🚗 Modelo: i30 2.0 \n⭕ Cor: Preto\n💰 Por: R$  43.990\n🗓 Ano/ modelo: 2009/2010\n🔑 Cambio: Automático\n⛽ Combustível: Gasolina\n')">
         <img src="img/i30/1.jpeg" alt="imagem carro" />
         <h2>i30 2.0 2010</h2>
         <button class="btn-saiba-mais">Saiba Mais</button>
-    </div>
+      </div>
 
 
-    <div class="box" onclick="openPopup(['img/Cronus/2.jpeg', 'img/Cronus/3.jpeg',
+      <div class="box"
+        onclick="openPopup(['img/Cronus/2.jpeg', 'img/Cronus/3.jpeg',
     'img/Cronus/4.jpeg', 'img/Cronus/5.jpeg', 'img/Cronus/6.jpeg'],'Cronos Drive 1.3 2022', '🚗 Modelo: Cronos Drive 1.3 2022\n⭕ Cor: Cinza\n💰 Por: R$ 74.900\n🗓 Ano/ modelo: 2021/2022\n🔑 Cambio: Manual\n⛽ Combustível: Flex\n')">
-     <img src="img/Cronus/1.jpeg" alt="imagem carro" />
-     <h2>Cronos Drive 1.3 2022</h2>
-     <button class="btn-saiba-mais">Saiba Mais</button>
- </div>
+        <img src="img/Cronus/1.jpeg" alt="imagem carro" />
+        <h2>Cronos Drive 1.3 2022</h2>
+        <button class="btn-saiba-mais">Saiba Mais</button>
+      </div>
+
+      <div class="box"
+        onclick="openPopup(['img/onixBranco/2.jpeg',
+        'img/onixBranco/3.jpeg', 'img/onixBranco/4.jpeg', 'img/onixBranco/5.jpeg',
+        'img/onixBranco/6.jpeg', 'img/onixBranco/7.jpeg', 'img/onixBranco/8.jpeg'],'Onix LT', '🚗 Modelo:1.0\n⭕ Cor: Branco\n🗓 Ano/ modelo: 2017/2018\n🔑 Cambio: Manual\n⛽ Combustível: Flex\n')">
+        <img src='img/onixBranco/1.jpeg' alt="imagem carro" />
+        <h2>Onix LT 2018</h2>
+        <button class="btn-saiba-mais">Saiba Mais</button>
+      </div>
+
+      <div class="box"
+        onclick="openPopup(['img/unoVerm/2.jpeg', 'img/unoVerm/3.jpeg', 'img/unoVerm/4.jpeg',
+        'img/unoVerm/5.jpeg', 'img/unoVerm/6.jpeg', 'img/unoVerm/7.jpeg'],'Uno vivace', '🚗 Modelo:1.0\n⭕ Cor: Vermelhor\n🗓 Ano/ modelo: 2013/2014\n🔑 Cambio: Manual\n⛽ Combustível: Flex\n')">
+        <img src='img/unoVerm/1.jpeg' alt="imagem carro" />
+        <h2>Uno vivace 2014</h2>
+        <button class="btn-saiba-mais">Saiba Mais</button>
+      </div>
+
+      <div class="box"
+        onclick="openPopup(['img/sonic/2.jpeg', 'img/sonic/3.jpeg',
+        'img/sonic/4.jpeg', 'img/sonic/5.jpeg', 'img/sonic/6.jpeg'],'Sonic LTZ', '🚗 Modelo:1.6\n⭕ Cor: Prata\n🗓 Ano/ modelo: 2012/2012\n🔑 Cambio: Automático\n⛽ Combustível: Flex\n')">
+        <img src='img/sonic/1.jpeg' alt="imagem carro" />
+        <h2>Sonic LTZ 2012</h2>
+        <button class="btn-saiba-mais">Saiba Mais</button>
+      </div>
+
+      <div class="box"
+        onclick="openPopup(['img/corsa/2.jpeg', 'img/corsa/3.jpeg', 'img/corsa/4.jpeg', 'img/corsa/5.jpeg',
+         'img/corsa/6.jpeg', 'img/corsa/7.jpeg'],'Corsa Wind', '🚗 Modelo:1.0 básico\n⭕ Cor: Vinho\n🗓 Ano/ modelo: 1996/1996\n🔑 Cambio: Manual\n⛽ Combustível: Gasolina\n')">
+        <img src='img/corsa/1.jpeg' alt="imagem carro" />
+        <h2>Corsa Wind 1996</h2>
+        <button class="btn-saiba-mais">Saiba Mais</button>
+      </div>
+
+      <div class="box"
+        onclick="openPopup(['img/Audi/2.jpeg', 'img/Audi/3.jpeg', 'img/Audi/4.jpeg', 'img/Audi/5.jpeg',
+         'img/Audi/6.jpeg'],'Audi A1', '🚗 Modelo:1.4 completo\n⭕ Cor: Branco\n🗓 Ano/ modelo: 2012/2013\n🔑 Cambio: Automático\n⛽ Combustível: Gasolina\n')">
+        <img src='img/Audi/1.jpg' alt="imagem carro" />
+        <h2>Audi A1 2013</h2>
+        <button class="btn-saiba-mais">Saiba Mais</button>
+      </div>
+
+      <div class="box"
+        onclick="openPopup(['img/C4/3.jpeg', 'img/C4/4.jpeg', 'img/C4/5.jpeg', 'img/C4/6.jpeg',
+         'img/C4/7.jpeg', 'img/C4/8.jpeg'],'C4 Cactus Feel ', '🚗 Modelo:1.6 completo\n⭕ Cor: Branco\n🗓 Ano/ modelo: 2022/2022\n🔑 Cambio: Automático\n⛽ Combustível: Flex\n')">
+        <img src='img/C4/1.jpeg' alt="imagem carro" />
+        <h2>C4 Cactus Feel 2022</h2>
+        <button class="btn-saiba-mais">Saiba Mais</button>
+      </div>
+
+      <div class="box"
+        onclick="openPopup(['img/Argo/2.jpeg', 'img/Argo/3.jpeg', 'img/Argo/4.jpeg', 'img/Argo/5.jpeg',
+        'img/Argo/6.jpeg', 'img/Argo/7.jpeg', 'img/Argo/8.jpeg', 'img/Argo/9.jpeg'],'Argo Drive ', '🚗 Modelo:1.0 completo\n⭕ Cor: Branco\n🗓 Ano/ modelo: 2019/2020\n🔑 Cambio: Manual\n⛽ Combustível: Flex\n')">
+        <img src='img/Argo/1.jpeg' alt="imagem carro" />
+        <h2>Argo Drive 2020</h2>
+        <button class="btn-saiba-mais">Saiba Mais</button>
+      </div>
+
+      <div class="box"
+        onclick="openPopup(['img/Punto/2.jpeg', 'img/Punto/3.jpeg', 'img/Punto/4.jpeg', 'img/Punto/5.jpeg',
+        'img/Punto/6.jpeg', 'img/Punto/7.jpeg', 'img/Punto/8.jpeg'],'Punto Attactive ', '🚗 Modelo:1.4 completo\n⭕ Cor: Prata\n🗓 Ano/ modelo: 2010/2011\n🔑 Cambio: Manual\n⛽ Combustível: Flex\n')">
+        <img src='img/Punto/1.jpeg' alt="imagem carro" />
+        <h2>Punto Attactive 2011</h2>
+        <button class="btn-saiba-mais">Saiba Mais</button>
+      </div>
+
+      <div class="box"
+        onclick="openPopup(['img/palioPrata/2.jpeg', 'img/palioPrata/3.jpeg', 'img/palioPrata/4.jpeg', 'img/palioPrata/5.jpeg',
+        'img/palioPrata/6.jpeg', 'img/palioPrata/7.jpeg'],'Palio 1.0', '🚗 Modelo:1.4 básico\n⭕ Cor: Prata\n🗓 Ano/ modelo: 2006/2007\n🔑 Cambio: Manual\n⛽ Combustível: Flex\n')">
+        <img src='img/palioPrata/1.jpeg' alt="imagem carro" />
+        <h2>Palio 1.0 2017</h2>
+        <button class="btn-saiba-mais">Saiba Mais</button>
+      </div>
+
+      <div class="box"
+        onclick="openPopup(['img/siena/2.jpeg', 'img/siena/3.jpeg', 'img/siena/4.jpeg', 'img/siena/5.jpeg',
+        'img/siena/6.jpeg', 'img/siena/7.jpeg'],'Siena EL', '🚗 Modelo:1.4 básico\n⭕ Cor: Preto\n🗓 Ano/ modelo: 2012/2013\n🔑 Cambio: Manual\n⛽ Combustível: Flex\n')">
+        <img src='img/siena/1.jpeg' alt="imagem carro" />
+        <h2>Siena EL 2013</h2>
+        <button class="btn-saiba-mais">Saiba Mais</button>
+      </div>
+
+      <div class="box"
+        onclick="openPopup(['img/Kavermelho/2.jpeg', 'img/Kavermelho/4.jpeg', 'img/Kavermelho/5.jpeg', 'img/Kavermelho/6.jpeg',
+      'img/Kavermelho/7.jpeg', 'img/Kavermelho/8.jpeg'],'Ford Ka', '🚗 Modelo:1.0 completo\n⭕ Cor: Vermelho\n🗓 Ano/ modelo: 2010/2011\n🔑 Cambio: Manual\n⛽ Combustível: Flex\n')">
+        <img src='img/Kavermelho/1.jpeg' alt="imagem carro" />
+        <h2>Ford Ka 2011</h2>
+        <button class="btn-saiba-mais">Saiba Mais</button>
+      </div>
+
+      <div class="box"
+        onclick="openPopup(['img/Voyage/2.jpeg', 'img/Voyage/3.jpeg', 'img/Voyage/4.jpeg', 'img/Voyage/5.jpeg',
+    'img/Voyage/6.jpeg', 'img/Voyage/7.jpeg', 'img/Voyage/8.jpeg', 'img/Voyage/9.jpeg'],'Voyage TrendLine', '🚗 Modelo:1.0 completo\n⭕ Cor: Branco\n🗓 Ano/ modelo: 2021/2022\n🔑 Cambio: Manual\n⛽ Combustível: Flex\n')">
+        <img src='img/Voyage/1.jpeg' alt="imagem carro" />
+        <h2>Voyage TrendLine 2022</h2>
+        <button class="btn-saiba-mais">Saiba Mais</button>
+      </div>
+
+      <div class="box"
+        onclick="openPopup(['img/s10/2.jpeg', 'img/s10/3.jpeg', 'img/s10/4.jpeg', 'img/s10/5.jpeg',
+       'img/s10/6.jpeg', 'img/s10/7.jpeg'],'S10 LS', '🚗 Modelo:2.8 completo\n⭕ Cor: Prata\n🗓 Ano/ modelo: 2018/2019\n🔑 Cambio: Manual\n⛽ Combustível: Diesel\n')">
+        <img src='img/s10/1.jpeg' alt="imagem carro" />
+        <h2>S10 LS 2019</h2>
+        <button class="btn-saiba-mais">Saiba Mais</button>
+      </div>
+
+      <div class="box"
+        onclick="openPopup(['img/fitCinza/2.jpeg', 'img/fitCinza/4.jpeg', 'img/fitCinza/5.jpeg', 'img/fitCinza/6.jpeg',
+     'img/fitCinza/7.jpeg', 'img/fitCinza/8.jpeg'],'FIT LX ', '🚗 Modelo:1.4 completo\n⭕ Cor: Prata\n🗓 Ano/ modelo: 2008/2008\n🔑 Cambio: Manual\n⛽ Combustível: Gasolina\n')">
+        <img src='img/fitCinza/1.jpeg' alt="imagem carro" />
+        <h2>FIT LX 2008</h2>
+        <button class="btn-saiba-mais">Saiba Mais</button>
+      </div>
+
+      <div class="box"
+        onclick="openPopup(['img/Azera/2.jpeg', 'img/Azera/3.jpeg', 'img/Azera/4.jpeg', 'img/Azera/5.jpeg', 'img/Azera/6.jpeg',
+     'img/Azera/7.jpeg', 'img/Azera/8.jpeg0', 'img/Azera/9.jpeg'],'Azera V6 ', '🚗 Modelo:3.3 completo\n⭕ Cor: Prata\n🗓 Ano/ modelo: 2010/2011\n🔑 Cambio: Automático\n⛽ Combustível: Gasolina\n')">
+        <img src='img/Azera/1.jpeg' alt="imagem carro" />
+        <h2>Azera V6 2011</h2>
+        <button class="btn-saiba-mais">Saiba Mais</button>
+      </div>
+
+      <div class="box"
+        onclick="openPopup(['img/strada/2.jpeg', 'img/strada/3.jpeg', 'img/strada/4.jpeg', 'img/strada/5.jpeg',
+     'img/strada/6.jpeg'],'Strada HD', '🚗 Modelo:1.4 básico\n⭕ Cor: Branco\n🗓 Ano/ modelo: 2019/2019\n🔑 Cambio: manual\n⛽ Combustível: flex\n')">
+        <img src='img/strada/1.jpeg' alt="imagem carro" />
+        <h2>Strada HD 2019</h2>
+        <button class="btn-saiba-mais">Saiba Mais</button>
+      </div>
+
+      <div class="box"
+        onclick="openPopup(['img/strada/2.jpeg', 'img/strada/3.jpeg', 'img/strada/4.jpeg', 'img/strada/5.jpeg',
+     'img/strada/6.jpeg'],'Strada HD', '🚗 Modelo:1.4 básico\n⭕ Cor: Branco\n🗓 Ano/ modelo: 2019/2020\n🔑 Cambio: manual\n⛽ Combustível: flex\n')">
+        <img src='img/strada/1.jpeg' alt="imagem carro" />
+        <h2>Strada 2020</h2>
+        <button class="btn-saiba-mais">Saiba Mais</button>
+      </div>
+
+      <div class="box"
+        onclick="openPopup(['img/unoVivace/2.jpeg', 'img/unoVivace/3.jpeg', 'img/unoVivace/4.jpeg', 'img/unoVivace/5.jpeg',
+     'img/unoVivace/6.jpeg', 'img/unoVivace/7.jpeg', 'img/unoVivace/8.jpeg'],'Uno Vivace', '🚗 Modelo:1.0 Trava Eletrica\n⭕ Cor: Branco\n🗓 Ano/ modelo: 2014/2015\n🔑 Cambio: manual\n⛽ Combustível: flex\n')">
+        <img src='img/unoVivace/1.jpeg' alt="imagem carro" />
+        <h2>Uno Vivace 2015</h2>
+        <button class="btn-saiba-mais">Saiba Mais</button>
+      </div>
+
+      <div class="box"
+        onclick="openPopup(['img/newFiesta/2.jpeg', 'img/newFiesta/3.jpeg', 'img/newFiesta/4.jpeg', 'img/newFiesta/5.jpeg',
+     'img/newFiesta/6.jpeg', 'img/newFiesta/7.jpeg', 'img/newFiesta/8.jpeg'],'New Fiesta ', '🚗 Modelo:1.6 completo\n⭕ Cor: Preto\n🗓 Ano/ modelo: 2014/2015\n🔑 Cambio: Automático\n⛽ Combustível: flex\n')">
+        <img src='img/newFiesta/1.jpeg' alt="imagem carro" />
+        <h2>New Fiesta 2015</h2>
+        <button class="btn-saiba-mais">Saiba Mais</button>
+      </div>
+
+      <div class="box"
+        onclick="openPopup(['img/FordKa/2.jpeg', 'img/FordKa/3.jpeg', 'img/FordKa/4.jpeg', 'img/FordKa/5.jpeg',
+     'img/FordKa/6.jpeg', 'img/FordKa/7.jpeg', 'img/FordKa/8.jpeg'],'Ford Ka', '🚗 Modelo:1.5 básico\n⭕ Cor: Branco\n🗓 Ano/ modelo: 2019/2019\n🔑 Cambio: manual\n⛽ Combustível: flex\n')">
+        <img src='img/FordKa/1.jpeg' alt="imagem carro" />
+        <h2>Ford Ka 2019</h2>
+        <button class="btn-saiba-mais">Saiba Mais</button>
+      </div>
+
+      <div class="box"
+        onclick="openPopup(['img/Fiesta/2.jpeg', 'img/Fiesta/3.jpeg', 'img/Fiesta/4.jpeg',
+     'img/Fiesta/5.jpeg', 'img/Fiesta/6.jpeg', 'img/Fiesta/7.jpeg'],'Fiesta 1.6', '🚗 Modelo:1.6 completo com multimídia\n⭕ Cor: Preto\n🗓 Ano/ modelo: 2013/2014\n🔑 Cambio: manual\n⛽ Combustível: flex\n')">
+        <img src='img/Fiesta/1.jpeg' alt="imagem carro" />
+        <h2>Fiesta 1.6 2014</h2>
+        <button class="btn-saiba-mais">Saiba Mais</button>
+      </div>
+
+      <div class="box"
+        onclick="openPopup(['img/kaVerm/2.jpeg', 'img/kaVerm/3.jpeg', 'img/kaVerm/4.jpeg', 'img/kaVerm/4.jpeg', 'img/kaVerm/6.jpeg', 
+        'img/kaVerm/7.jpeg', 'img/kaVerm/8.jpeg'],'Ford Ka', '🚗 Modelo:1.0 básico\n⭕ Cor: Vermelho\n🗓 Ano/ modelo: 2010/2010\n🔑 Cambio: manual\n⛽ Combustível: flex\n')">
+        <img src='img/kaVerm/1.jpeg' alt="imagem carro" />
+        <h2>Ford Ka 2010</h2>
+        <button class="btn-saiba-mais">Saiba Mais</button>
+      </div>
+
+      <div class="box"
+        onclick="openPopup(['img/kaPreto/2.jpeg', 'img/kaPreto/3.jpeg', 'img/kaPreto/4.jpeg', 'img/kaPreto/5.jpeg', 'img/kaPreto/6.jpeg', 
+        'img/kaPreto/7.jpeg', 'img/kaPreto/8.jpeg', 'img/kaPreto/9.jpeg'],'Ford Ka', '🚗 Modelo:1.0 básico\n⭕ Cor: Preto\n🗓 Ano/ modelo: 2010/2011\n🔑 Cambio: manual\n⛽ Combustível: flex\n')">
+        <img src='img/kaPreto/1.jpeg' alt="imagem carro" />
+        <h2>Ford Ka 2011</h2>
+        <button class="btn-saiba-mais">Saiba Mais</button>
+      </div>
+
+      <div class="box"
+        onclick="openPopup(['img/L200/2.jpeg', 'img/L200/3.jpeg', 'img/L200/3.jpeg', 'img/L200/5.jpeg', 'img/L200/6.jpeg', 
+        'img/L200/7.jpeg', 'img/L200/8.jpeg'],'L200 TRITON SPORT HPE', '🚗 Modelo:2.4 completo\n⭕ Cor: Prata\n🗓 Ano/ modelo: 2017/2018\n🔑 Cambio: Automático\n⛽ Combustível: Diesel\n')">
+        <img src='img/L200/1.jpeg' alt="imagem carro" />
+        <h2>L200 Triton Sport HPE 2018</h2>
+        <button class="btn-saiba-mais">Saiba Mais</button>
+      </div>
+
+      <div class="box"
+        onclick="openPopup(['img/i30Preto/2.jpeg', 'img/i30Preto/3.jpeg', 'img/i30Preto/4.jpeg'],' i30 2.0 ', '🚗 Modelo:2.0 Turbo completo\n⭕ Cor: Preto\n🗓 Ano/ modelo: 2010/2011\n🔑 Cambio: Automático\n⛽ Combustível: flex\n')">
+        <img src='img/i30Preto/1.jpeg' alt="imagem carro" />
+        <h2>i30 2.0 Turbo 2011 </h2>
+        <button class="btn-saiba-mais">Saiba Mais</button>
+      </div>
+
+      <div class="box"
+        onclick="openPopup(['img/hb20Conf/2.jpeg', 'img/hb20Conf/3.jpeg', 'img/hb20Conf/4.jpeg', 'img/hb20Conf/5.jpeg', 'img/hb20Conf/6.jpeg', 
+      'img/hb20Conf/7.jpeg', 'img/hb20Conf/8.jpeg'],'HB20 Confort ', '🚗 Modelo:1.0 completo\n⭕ Cor: Preto\n🗓 Ano/ modelo: 2019\n🔑 Cambio: manual\n⛽ Combustível: flex\n')">
+        <img src='img/hb20Conf/1.jpeg' alt="imagem carro" />
+        <h2>HB20 Confort 2019</h2>
+        <button class="btn-saiba-mais">Saiba Mais</button>
+      </div>
+
+      <div class="box"
+        onclick="openPopup(['img/hb20Preto/2.jpeg', 'img/hb20Preto/3.jpeg', 'img/hb20Preto/4.jpeg', 'img/hb20Preto/5.jpeg', 'img/hb20Preto/6.jpeg', 
+      'img/hb20Preto/7.jpeg', 'img/hb20Preto/8.jpeg'],'HB20 Confort ', '🚗 Modelo:1.6 completo\n⭕ Cor: Preto\n🗓 Ano/ modelo: 2014/2015\n🔑 Cambio: manual\n⛽ Combustível: flex\n')">
+        <img src='img/hb20Preto/1.jpeg' alt="imagem carro" />
+        <h2>HB20 Confort 2015</h2>
+        <button class="btn-saiba-mais">Saiba Mais</button>
+      </div>
+
+      <div class="box"
+        onclick="openPopup(['img/i30Branco/2.jpeg', 'img/i30Branco/4.jpeg', 'img/i30Branco/5.jpeg'],'i30', '🚗 Modelo:1.8 completo\n⭕ Cor: Branco\n🗓 Ano/ modelo: 2014/2015\n🔑 Cambio: Automático  \n⛽ Combustível: flex\n')">
+        <img src='img/i30Branco/1.jpeg' alt="imagem carro" />
+        <h2>i30 2015</h2>
+        <button class="btn-saiba-mais">Saiba Mais</button>
+      </div>
+
+      <div class="box"
+        onclick="openPopup(['img/foxPreto/2.jpeg', 'img/foxPreto/3.jpeg', 'img/foxPreto/4.jpeg', 'img/foxPreto/5.jpeg', 'img/foxPreto/6.jpeg', 
+      'img/foxPreto/7.jpeg', 'img/foxPreto/8.jpeg', 'img/foxPreto/9.jpeg'],'Fox G II', '🚗 Modelo:1.0 básico\n⭕ Cor: Preto\n🗓 Ano/ modelo: 2013/2014\n🔑 Cambio: manual\n⛽ Combustível: flex\n')">
+        <img src='img/foxPreto/1.jpeg' alt="imagem carro" />
+        <h2>Fox G II 2014</h2>
+        <button class="btn-saiba-mais">Saiba Mais</button>
+      </div>
+
+      <div class="box"
+        onclick="openPopup(['img/golCinza/2.jpeg', 'img/golCinza/3.jpeg', 'img/golCinza/4.jpeg', 'img/golCinza/5.jpeg', 'img/golCinza/6.jpeg', 
+      'img/golCinza/7.jpeg', 'img/golCinza/8.jpeg'],'Gol 1.0', '🚗 Modelo:1.0 básico\n⭕ Cor: Cinza\n🗓 Ano/ modelo: 2004\n🔑 Cambio: manual\n⛽ Combustível: Gasolina\n')">
+        <img src='img/golCinza/1.jpeg' alt="imagem carro" />
+        <h2>Gol 1.0 2004</h2>
+        <button class="btn-saiba-mais">Saiba Mais</button>
+      </div>
+
+      <div class="box"
+        onclick="openPopup(['img/golPreto/2.jpeg', 'img/golPreto/3.jpeg', 'img/golPreto/4.jpeg', 'img/golPreto/5.jpeg', 'img/golPreto/6.jpeg', 
+      'img/golPreto/7.jpeg', 'img/golPreto/8.jpeg'],'Gol 1.6 ', '🚗 Modelo:1.0 completo\n⭕ Cor: Preto\n🗓 Ano/ modelo: 2018/2019\n🔑 Cambio: manual\n⛽ Combustível: flex\n')">
+        <img src='img/golPreto/1.jpeg' alt="imagem carro" />
+        <h2>Gol 1.6 2019</h2>
+        <button class="btn-saiba-mais">Saiba Mais</button>
+      </div>
+
+      <div class="box"
+        onclick="openPopup(['img/saveiroBranco/2.jpeg', 'img/saveiroBranco/3.jpeg', 'img/saveiroBranco/4.jpeg', 'img/saveiroBranco/5.jpeg',
+        'img/saveiroBranco/6.jpeg'],'Saveiro Robust', '🚗 Modelo:1.6 completo\n⭕ Cor: Branco\n🗓 Ano/ modelo: 2019/2020\n🔑 Cambio: manual\n⛽ Combustível: flex\n')">
+        <img src='img/saveiroBranco/1.jpeg' alt="imagem carro" />
+        <h2>Saveiro Robust 2020</h2>
+        <button class="btn-saiba-mais">Saiba Mais</button>
+      </div>
+
+      <div class="box"
+        onclick="openPopup(['img/tucsan/2.jpeg', 'img/tucsan/3.jpeg', 'img/tucsan/4.jpeg', 'img/tucsan/5.jpeg',
+        'img/tucsan/6.jpeg', 'img/tucsan/7.jpeg', 'img/tucsan/8.jpeg'],'Tucson GL', '🚗 Modelo:2.0 completo\n⭕ Cor: Preto\n🗓 Ano/ modelo: 2010\n🔑 Cambio: Automático\n⛽ Combustível: Gasolina\n')">
+        <img src='img/tucsan/1.jpeg' alt="imagem carro" />
+        <h2>Tucson GL 2010</h2>
+        <button class="btn-saiba-mais">Saiba Mais</button>
+      </div>
+
+      <div class="box"
+        onclick="openPopup(['img/golPrata/2.jpeg', 'img/golPrata/3.jpeg', 'img/golPrata/4.jpeg', 'img/golPrata/5.jpeg',
+        'img/golPrata/6.jpeg', 'img/golPrata/7.jpeg', 'img/golPrata/8.jpeg'],'Gol 1.0', '🚗 Modelo:1.0 completo\n⭕ Cor: Prata\n🗓 Ano/ modelo: 2020\n🔑 Cambio: manual\n⛽ Combustível: flex\n')">
+        <img src='img/golPrata/1.jpeg' alt="imagem carro" />
+        <h2>Gol 1.0 2020</h2>
+        <button class="btn-saiba-mais">Saiba Mais</button>
+      </div>
+
+      <div class="box"
+        onclick="openPopup(['img/Onix_Black_Edition/2.jpeg', 'img/Onix_Black_Edition/2.jpeg', 'img/Onix_Black_Edition/4.jpeg', 'img/Onix_Black_Edition/5.jpeg',
+        'img/Onix_Black_Edition/6.jpeg', 'img/Onix_Black_Edition/7.jpeg'],'Onix Black Edition', '🚗 Modelo:1.0 completo\n⭕ Cor: Prata\n🗓 Ano/ modelo: 2021\n🔑 Cambio: manual\n⛽ Combustível: flex\n')">
+        <img src='img/Onix_Black_Edition/1.jpeg' alt="imagem carro" />
+        <h2>Onix Black Edition 2021 </h2>
+        <button class="btn-saiba-mais">Saiba Mais</button>
+      </div>
+
+
+
 
   </section>
 
@@ -430,13 +758,13 @@
       const popupImg = document.getElementById('popup-img');
       const popupText = document.getElementById('popup-text');
       const popupTitle = document.getElementById('popup-title');
-// Define a imagem e o texto no popup
-currentImageSet = imageArray;
+      // Define a imagem e o texto no popup
+      currentImageSet = imageArray;
       currentImageIndex = 0;
       popupImg.src = currentImageSet[currentImageIndex];
       popupText.value = description;
       popupTitle.innerHTML = carModel;
- // Exibe o popup
+      // Exibe o popup
       popup.style.display = 'block';
     }
 
@@ -449,38 +777,38 @@ currentImageSet = imageArray;
     }
 
     function nextImage() {
-  currentImageIndex = (currentImageIndex + 1) % currentImageSet.length;
-  const popupImg = document.getElementById('popup-img');
-  popupImg.src = currentImageSet[currentImageIndex];
+      currentImageIndex = (currentImageIndex + 1) % currentImageSet.length;
+      const popupImg = document.getElementById('popup-img');
+      popupImg.src = currentImageSet[currentImageIndex];
 
-  function closePopup() {
-      const popup = document.getElementById('popup');
-      popup.style.display = 'none';
+      function closePopup() {
+        const popup = document.getElementById('popup');
+        popup.style.display = 'none';
+      }
+
     }
 
-}
-
-function prevImage() {
-  currentImageIndex = (currentImageIndex - 1 + currentImageSet.length) % currentImageSet.length;
-  const popupImg = document.getElementById('popup-img');
-  popupImg.src = currentImageSet[currentImageIndex];
-}
+    function prevImage() {
+      currentImageIndex = (currentImageIndex - 1 + currentImageSet.length) % currentImageSet.length;
+      const popupImg = document.getElementById('popup-img');
+      popupImg.src = currentImageSet[currentImageIndex];
+    }
 
   </script>
 
-<div class="whatsapp-icon">
-  <a href="https://api.whatsapp.com/send?phone=5561995088686" target="_blank" title="Fale conosco pelo WhatsApp">
-    <img src="img/w4.png" alt="WhatsApp">
-  </a>
-</div>
+  <div class="whatsapp-icon">
+    <a href="https://api.whatsapp.com/send?phone=5561995088686" target="_blank" title="Fale conosco pelo WhatsApp">
+      <img src="img/w4.png" alt="WhatsApp">
+    </a>
+  </div>
 
 
   <footer>
 
-    <p>&copy; 2023 Desenvolvido por Daniele Cardoso | Todos os direitos reservados &#174;</p> 
+    <p>&copy; 2023 Desenvolvido por Daniele Cardoso | Todos os direitos reservados &#174;</p>
 
   </footer>
 
 </body>
-</html>
 
+</html>
