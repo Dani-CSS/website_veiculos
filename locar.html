@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <title>Loqcar</title>
-    
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -16,7 +18,7 @@
             align-items: center;
             height: 100vh;
             background-image: url(img/locar2.jpg);
-            
+
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -41,7 +43,7 @@
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.452);
         }
 
-       
+
         .container-vantagens {
             display: flex;
             justify-content: space-between;
@@ -57,7 +59,7 @@
         }
 
         .container-vantagens .vantagem:hover {
-            background-color:  rgba(0, 217, 255, 0.438);
+            background-color: rgba(0, 217, 255, 0.438);
         }
 
         .container-vantagens p {
@@ -101,7 +103,7 @@
         }
 
         button {
-            background-color:  rgba(5, 47, 138, 0.774);
+            background-color: rgba(5, 47, 138, 0.774);
             color: #fff;
             padding: 10px;
             border: none;
@@ -123,24 +125,32 @@
                 width: 100%;
                 margin-bottom: 10px;
             }
+
             form {
-        max-width: 100%; /* Use 100% da largura disponível */
-        width: 80%; /* Ajuste conforme necessário para o seu design */
-        margin-top: 20px; /* Adicione espaçamento superior ao formulário */
-    }
+                max-width: 100%;
+                /* Use 100% da largura disponível */
+                width: 80%;
+                /* Ajuste conforme necessário para o seu design */
+                margin-top: 20px;
+                /* Adicione espaçamento superior ao formulário */
+            }
 
-    label, input, button {
-        width: 100%; /* Garanta que os elementos ocupem toda a largura do contêiner */
-        box-sizing: border-box; /* Inclua as bordas e o preenchimento no cálculo da largura */
-    }
+            label,
+            input,
+            button {
+                width: 100%;
+                /* Garanta que os elementos ocupem toda a largura do contêiner */
+                box-sizing: border-box;
+                /* Inclua as bordas e o preenchimento no cálculo da largura */
+            }
 
-    button {
-        margin-top: 10px; /* Adicione um espaçamento superior para o botão */
-    }
-
-  
+            button {
+                margin-top: 10px;
+                /* Adicione um espaçamento superior para o botão */
+            }
     </style>
 </head>
+
 <body>
 
     <div class="container-logo">
@@ -174,36 +184,37 @@
 
     <script>
         function sendWhatsAppMessage() {
-        var pickupDateTime = document.getElementById('pickupDateTime').value;
-        var returnDateTime = document.getElementById('returnDateTime').value;
+            var pickupDateTime = document.getElementById('pickupDateTime').value;
+            var returnDateTime = document.getElementById('returnDateTime').value;
 
-        // Formatando a data e o horário no padrão brasileiro
-        var formattedPickupDateTime = formatDateTime(pickupDateTime);
-        var formattedReturnDateTime = formatDateTime(returnDateTime);
+            // Formatando a data e o horário no padrão brasileiro
+            var formattedPickupDateTime = formatDateTime(pickupDateTime);
+            var formattedReturnDateTime = formatDateTime(returnDateTime);
 
-        var whatsappMessage = `Quero locar um carro com a Loqcar! Data de retirada: ${formattedPickupDateTime} Devolução: ${formattedReturnDateTime}`;
+            var whatsappMessage = `Quero locar um carro com a Loqcar! Data de retirada: ${formattedPickupDateTime} Devolução: ${formattedReturnDateTime}`;
 
-        var whatsappLink = `https://wa.me/5561992482692?text=${encodeURIComponent(whatsappMessage)}`;
+            var whatsappLink = `https://wa.me/5561992482692?text=${encodeURIComponent(whatsappMessage)}`;
 
-        window.open(whatsappLink, '_blank');
-    }
+            window.open(whatsappLink, '_blank');
+        }
 
-    function formatDateTime(dateTimeString) {
-        var dateTime = new Date(dateTimeString);
-        var day = addLeadingZero(dateTime.getDate());
-        var month = addLeadingZero(dateTime.getMonth() + 1);
-        var year = dateTime.getFullYear();
-        var hour = addLeadingZero(dateTime.getHours());
-        var minute = addLeadingZero(dateTime.getMinutes());
+        function formatDateTime(dateTimeString) {
+            var dateTime = new Date(dateTimeString);
+            var day = addLeadingZero(dateTime.getDate());
+            var month = addLeadingZero(dateTime.getMonth() + 1);
+            var year = dateTime.getFullYear();
+            var hour = addLeadingZero(dateTime.getHours());
+            var minute = addLeadingZero(dateTime.getMinutes());
 
-        return `${day}/${month}/${year} ${hour}:${minute}`;
-    }
+            return `${day}/${month}/${year} ${hour}:${minute}`;
+        }
 
-    function addLeadingZero(value) {
-        return value < 10 ? '0' + value : value;
-    }
+        function addLeadingZero(value) {
+            return value < 10 ? '0' + value : value;
+        }
     </script>
-    
+
 
 </body>
+
 </html>
