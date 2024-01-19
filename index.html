@@ -65,8 +65,12 @@
             font-weight: 400;
             line-height: 1.8em;
             color: #666;
-            margin-bottom: 100px;
 
+
+        }
+
+        body {
+            overflow-x: hidden;
         }
 
         #menu {
@@ -212,7 +216,6 @@
 
         .whatsapp-icon img {
             width: 60px;
-            /* Ajuste o tamanho conforme necessário */
         }
 
         footer {
@@ -233,12 +236,9 @@
         @media only screen and (max-width: 768px) {
             .logomarca {
                 width: 20%;
-                /* Ajuste conforme necessário */
                 height: auto;
                 margin: 0 auto;
-                /* Isso centralizará a logomarca horizontalmente */
                 display: block;
-                /* Isso garante que a margem automática funcione corretamente */
             }
 
             .navbar {
@@ -254,14 +254,11 @@
 
             #menu {
                 text-align: center;
-                /* Adicione esta propriedade para centralizar o conteúdo */
             }
 
             #menu a {
                 display: block;
-                /* Garante que o link ocupa toda a largura disponível */
                 padding: 8px;
-                /* Adicione algum espaçamento conforme necessário */
                 text-decoration: none;
                 font-family: "Poppins", sans-serif;
                 color: var(--bg-color);
@@ -269,12 +266,10 @@
 
             .navbar ul {
                 margin: 10px 0;
-                /* Adicione uma margem para separar a logomarca da lista de navegação */
             }
 
             .navbar ul a {
                 font-size: 12px;
-                /* Ajuste conforme necessário */
             }
 
             .section1 {
@@ -284,10 +279,8 @@
                 resize: calc(1200px 1920px);
                 background-image: url('img/frente_loja.jpeg');
                 background-size: cover;
-                /* Garante que a imagem cubra todo o contêiner */
                 background-repeat: no-repeat;
                 height: 100vh;
-                /* Preenche toda a altura da tela */
                 width: 100%;
 
             }
