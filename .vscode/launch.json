@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-DashfelApplication<dashfel>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "br.com.dcss.dashfel.dashfel.DashfelApplication",
+            "projectName": "dashfel",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
