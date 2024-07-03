@@ -18,7 +18,6 @@
       scroll-behavior: smooth;
       list-style: none;
       text-decoration: none;
-
     }
 
     :root {
@@ -39,7 +38,7 @@
     .navbar {
       position: relative;
       justify-content: space-between;
-      align-items: auto;
+      align-items: center;
       width: 100%;
       padding: 10px;
       display: flex;
@@ -58,7 +57,7 @@
 
     .logomarca {
       width: 10%;
-      height: 75%;
+      height: auto;
     }
 
     #menu a {
@@ -93,7 +92,6 @@
       max-width: 1068px;
       margin-left: auto;
       margin-right: auto;
-
     }
 
     .heading {
@@ -110,7 +108,6 @@
       font-weight: 300;
       padding: 9px;
       text-align: center;
-
     }
 
     .blog-container {
@@ -181,7 +178,6 @@
 
     .whatsapp-icon img {
       width: 60px;
-
     }
 
     .instagram-icon {
@@ -195,7 +191,6 @@
     .instagram-icon a {
       display: block;
       padding: 10px;
-
     }
 
     .instagram-icon a:hover {
@@ -204,15 +199,13 @@
 
     .instagram-icon img {
       width: 20px;
-
     }
 
     .centralizado-horizontal {
-            text-align: center;
+      text-align: center;
     }
 
     footer {
-
       background: var(--text-color);
       border-top: 2px solid var(--main-color);
       padding: 1%;
@@ -226,14 +219,12 @@
       justify-content: center;
     }
 
-
     @media only screen and (max-width: 768px) {
       .logomarca {
         width: 20%;
         height: auto;
         margin: 0 auto;
         display: block;
-
       }
 
       .navbar {
@@ -261,6 +252,8 @@
 
       .navbar ul {
         margin: 10px 0;
+        flex-direction: column;
+        align-items: center;
       }
 
       .navbar ul a {
@@ -271,8 +264,35 @@
         width: 40px;
       }
 
+      .blog-container {
+        flex-direction: column;
+        align-items: center;
+      }
 
+      .blog-container .box {
+        width: 100%;
+        padding: 10px;
+      }
+
+      .heading h2 {
+        font-size: 1.5rem;
+      }
+
+      .heading p {
+        font-size: 0.9rem;
+      }
+
+      .instagram-icon p {
+        font-size: 0.9rem;
+      }
     }
+
+    /* Additional CSS for responsive videos */
+    video {
+      width: 100%;
+      height: auto;
+    }
+
   </style>
 </head>
 
@@ -307,9 +327,9 @@
       <li><a href="quemsomos.html">Quem somos</a></li>
       <li><a href="patio.html">Pátio</a></li>
       <li><a href="blog.html">Fique por dentro</a></li>
-      <li><a href="https://www.canva.com/design/DAFqZdL1D34/cRb9zQHZBMVuDu98Yq8n4Q/view?utm_content=
-        DAFqZdL1D34&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">Contato</a></li>
+      <li><a href="https://www.canva.com/design/DAFqZdL1D34/cRb9zQHZBMVuDu98Yq8n4Q/view?utm_content=DAFqZdL1D34&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">Contato</a></li>
     </ul>
+  
   </nav>
 
 
